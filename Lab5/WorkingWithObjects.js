@@ -8,6 +8,7 @@ const module = {
   description: "Create a NodeJS server with ExpressJS",
   course: "CS101",
 };
+
 export default function WorkingWithObjects(app) {
   app.get("/lab5/assignment", (req, res) => {
     res.json(assignment);
