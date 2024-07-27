@@ -16,8 +16,7 @@ const app = express()
 app.use(
  cors({
    credentials: true,
-   origin: "https://a6--courageous-croissant-c29c91.netlify.app"
-   //process.env.NETLIFY_URL || "http://localhost:3000",
+   origin: process.env.NETLIFY_URL || "http://localhost:3000",
  })
 );
 const sessionOptions = {
