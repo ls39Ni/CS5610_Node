@@ -9,6 +9,7 @@ import mongoose from "mongoose";
 import "dotenv/config";
 import UserRoutes from "./Users/routes.js";
 import session from "express-session";
+import QuizRoutes from './Kanbas/Quizzes/routes.js';
 
 const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb+srv://Cluster36578:SVV9SW5wRlBX@cluster36578.rnzdhar.mongodb.net/kanbas?retryWrites=true&w=majority&appName=Cluster36578"
 mongoose.connect(CONNECTION_STRING);
@@ -38,6 +39,7 @@ UserRoutes(app);
 ModuleRoutes(app);
 CourseRoutes(app);
 AssignmentRoutes(app);
+QuizRoutes(app)
 Lab5(app);
 Hello(app)
 app.listen(process.env.PORT || 4000)
